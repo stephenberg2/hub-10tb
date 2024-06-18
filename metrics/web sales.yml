@@ -1,0 +1,9 @@
+unique_name: web sales
+object_type: metric
+label: web sales
+description: sum of web ext sales price multiplied by web sales quantity
+calculation_method: sum
+column: ws_web_sales
+dataset: web_sales
+format: $#,##0.00
+unrelated_dimensions_handling: empty
