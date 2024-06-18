@@ -18,9 +18,9 @@ hierarchies:
     folder: Date Attributes
     levels:
       - unique_name: year
+      - unique_name: quarter
       - unique_name: month
       - unique_name: day
-      - unique_name: quarter
 level_attributes:
   - unique_name: year
     label: year
