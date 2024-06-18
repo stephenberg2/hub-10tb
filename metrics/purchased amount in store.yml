@@ -1,0 +1,12 @@
+unique_name: purchased amount in store
+object_type: metric
+label: purchased amount in store
+description: >-
+  sum of wholesale costs and discount amount subtracted from list price and
+  sales price divided by 2
+calculation_method: sum
+column: ss_purchase_amt
+dataset: store_sales
+format: $#,##0.00
+unrelated_dimensions_handling: empty
+folder: store sales metrics

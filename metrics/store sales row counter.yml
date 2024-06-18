@@ -1,0 +1,8 @@
+unique_name: store sales row counter
+object_type: metric
+label: store sales row counter
+calculation_method: sum
+column: ss_row_counter
+dataset: store_sales
+folder: store sales metrics
+format: general number
