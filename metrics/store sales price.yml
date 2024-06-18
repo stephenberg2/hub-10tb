@@ -1,0 +1,9 @@
+unique_name: store sales price
+object_type: metric
+label: store sales price
+description: sum of ss_sales_price
+calculation_method: sum
+column: ss_sales_price
+dataset: store_sales
+format: $#,##0.00
+folder: store sales metrics

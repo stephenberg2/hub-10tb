@@ -1,0 +1,68 @@
+unique_name: date_dim
+object_type: dataset
+label: date_dim
+columns:
+  - name: d_date_sk
+    data_type: long
+  - name: d_date_id
+    data_type: string
+  - name: d_date
+    data_type: date
+  - name: d_month_seq
+    data_type: long
+  - name: d_week_seq
+    data_type: long
+  - name: d_quarter_seq
+    data_type: long
+  - name: d_year
+    data_type: long
+  - name: d_dow
+    data_type: long
+  - name: d_moy
+    data_type: long
+  - name: d_dom
+    data_type: long
+  - name: d_qoy
+    data_type: long
+  - name: d_fy_year
+    data_type: long
+  - name: d_fy_quarter_seq
+    data_type: long
+  - name: d_fy_week_seq
+    data_type: long
+  - name: d_day_name
+    data_type: string
+  - name: d_quarter_name
+    data_type: string
+  - name: d_holiday
+    data_type: string
+  - name: d_weekend
+    data_type: string
+  - name: d_following_holiday
+    data_type: string
+  - name: d_first_dom
+    data_type: long
+  - name: d_last_dom
+    data_type: long
+  - name: d_same_day_ly
+    data_type: long
+  - name: d_same_day_lq
+    data_type: long
+  - name: d_current_day
+    data_type: string
+  - name: d_current_week
+    data_type: string
+  - name: d_current_month
+    data_type: string
+  - name: d_current_quarter
+    data_type: string
+  - name: d_current_year
+    data_type: string
+  - name: month_key
+    data_type: string
+    sql: d_moy || d_year
+  - name: quarter_key
+    data_type: string
+    sql: d_qoy || d_year
+connection_id: con_benchmark-251817_TPCDS_10TB
+table: date_dim

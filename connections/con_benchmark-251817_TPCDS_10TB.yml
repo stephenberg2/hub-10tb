@@ -1,0 +1,6 @@
+unique_name: con_benchmark-251817_TPCDS_10TB
+object_type: connection
+label: con_benchmark-251817_TPCDS_10TB
+as_connection: big query
+database: benchmark-251817
+schema: TPCDS_10TB

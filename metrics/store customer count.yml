@@ -1,0 +1,10 @@
+unique_name: store customer count
+object_type: metric
+label: store customer count
+description: non-distinct count of ss_customer_sk
+calculation_method: count non-null
+column: ss_customer_sk
+dataset: store_sales
+format: general number
+unrelated_dimensions_handling: empty
+folder: store sales metrics
