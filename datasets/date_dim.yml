@@ -58,5 +58,11 @@ columns:
     data_type: string
   - name: d_current_year
     data_type: string
+  - name: month_key
+    data_type: string
+    sql: d_moy || d_year
+  - name: quarter_key
+    data_type: string
+    sql: d_qoy || d_year
 connection_id: con_benchmark-251817_TPCDS_10TB
 table: date_dim

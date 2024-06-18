@@ -15,7 +15,7 @@ hierarchies:
   - unique_name: date hierarchy
     label: date hierarchy
     description: year, quarter, month, day drill path
-    folder: Date Attributes
+    folder: date attributes
     levels:
       - unique_name: year
       - unique_name: quarter
@@ -56,8 +56,7 @@ level_attributes:
     dataset: date_dim
     is_unique_key: false
     key_columns:
-      - d_moy
-      - d_year
+      - month_key
     name_column: d_moy
     sort_column: d_moy
     time_unit: month
@@ -95,8 +94,7 @@ level_attributes:
     dataset: date_dim
     is_unique_key: false
     key_columns:
-      - d_qoy
-      - d_year
+      - quarter_key
     name_column: d_qoy
     sort_column: d_qoy
     time_unit: quarter
