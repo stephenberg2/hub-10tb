@@ -1,0 +1,10 @@
+unique_name: store net profit
+object_type: metric
+label: store net profit
+description: sum of ss_net_profit
+calculation_method: sum
+column: ss_net_profit
+dataset: store_sales
+format: $#,##0.00
+unrelated_dimensions_handling: empty
+folder: store sales metrics

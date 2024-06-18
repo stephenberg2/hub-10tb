@@ -1,0 +1,63 @@
+unique_name: store_sales
+object_type: dataset
+label: store_sales
+columns:
+  - name: ss_sold_date_sk
+    data_type: long
+  - name: ss_sold_time_sk
+    data_type: long
+  - name: ss_item_sk
+    data_type: long
+  - name: ss_customer_sk
+    data_type: long
+  - name: ss_cdemo_sk
+    data_type: long
+  - name: ss_hdemo_sk
+    data_type: long
+  - name: ss_addr_sk
+    data_type: long
+  - name: ss_store_sk
+    data_type: long
+  - name: ss_promo_sk
+    data_type: long
+  - name: ss_ticket_number
+    data_type: long
+  - name: ss_quantity
+    data_type: long
+  - name: ss_wholesale_cost
+    data_type: decimal(38,9)
+  - name: ss_list_price
+    data_type: decimal(38,9)
+  - name: ss_sales_price
+    data_type: decimal(38,9)
+  - name: ss_ext_discount_amt
+    data_type: decimal(38,9)
+  - name: ss_ext_sales_price
+    data_type: decimal(38,9)
+  - name: ss_ext_wholesale_cost
+    data_type: decimal(38,9)
+  - name: ss_ext_list_price
+    data_type: decimal(38,9)
+  - name: ss_ext_tax
+    data_type: decimal(38,9)
+  - name: ss_coupon_amt
+    data_type: decimal(38,9)
+  - name: ss_net_paid
+    data_type: decimal(38,9)
+  - name: ss_net_paid_inc_tax
+    data_type: decimal(38,9)
+  - name: ss_net_profit
+    data_type: decimal(38,9)
+
+#calculated columns
+  - name: ss_row_counter
+    data_type: int
+    sql: '1'
+  - name: ss_purchase_amt
+    data_type: decimal(14,6)
+    sql: >-
+      ((ss_ext_list_price-ss_ext_wholesale_cost-ss_ext_discount_amt)+ss_ext_sales_price)/2
+
+#connection info
+connection_id: con_benchmark-251817_TPCDS_10TB
+table: store_sales

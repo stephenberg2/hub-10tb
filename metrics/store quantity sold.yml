@@ -1,0 +1,10 @@
+unique_name: store quantity sold
+object_type: metric
+label: store quantity sold
+description: sum of ss_quantity
+calculation_method: sum
+column: ss_quantity
+dataset: store_sales
+format: general number
+unrelated_dimensions_handling: empty
+folder: store sales metrics

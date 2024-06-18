@@ -1,0 +1,10 @@
+unique_name: store coupon amount
+object_type: metric
+label: store coupon amount
+calculation_method: sum
+column: ss_coupon_amt
+dataset: store_sales
+description: sum of ss_coupon_amt
+format: $#,##0.00
+unrelated_dimensions_handling: empty
+folder: store sales metrics

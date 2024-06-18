@@ -1,0 +1,103 @@
+unique_name: date dimension
+object_type: dimension
+label: date dimension
+description: time dimension
+hierarchies:
+  - unique_name: date month hierarchy
+    label: date month hierarchy
+    description: year, month, day drill path
+    filter_empty: 'yes'
+    folder: date attributes
+    levels:
+      - unique_name: year
+      - unique_name: month
+      - unique_name: day
+  - unique_name: date hierarchy
+    label: date hierarchy
+    description: year, quarter, month, day drill path
+    folder: Date Attributes
+    levels:
+      - unique_name: year
+      - unique_name: month
+      - unique_name: day
+      - unique_name: quarter
+level_attributes:
+  - unique_name: year
+    label: year
+    allowed_calcs_for_dma:
+      - Lag
+      - ParallelPeriod
+      - Ancestor
+      - Descendants
+      - Siblings
+      - PeriodsToDate
+      - DatesPeriodsToDate
+      - Range
+    contains_unique_names: false
+    dataset: date_dim
+    is_unique_key: false
+    key_columns:
+      - d_year
+    name_column: d_year
+    sort_column: d_year
+    time_unit: year
+  - unique_name: month
+    label: month
+    allowed_calcs_for_dma:
+      - Lag
+      - ParallelPeriod
+      - Ancestor
+      - Descendants
+      - Siblings
+      - PeriodsToDate
+      - DatesPeriodsToDate
+      - Range
+    contains_unique_names: false
+    dataset: date_dim
+    is_unique_key: false
+    key_columns:
+      - d_moy
+      - d_year
+    name_column: d_moy
+    sort_column: d_moy
+    time_unit: month
+  - unique_name: day
+    label: day
+    allowed_calcs_for_dma:
+      - Lag
+      - ParallelPeriod
+      - Ancestor
+      - Descendants
+      - Siblings
+      - PeriodsToDate
+      - DatesPeriodsToDate
+      - Range
+    contains_unique_names: false
+    dataset: date_dim
+    is_unique_key: true
+    key_columns:
+      - d_date_sk
+    name_column: d_date
+    sort_column: d_date
+    time_unit: day
+  - unique_name: quarter
+    label: quarter
+    allowed_calcs_for_dma:
+      - Lag
+      - ParallelPeriod
+      - Ancestor
+      - Descendants
+      - Siblings
+      - PeriodsToDate
+      - DatesPeriodsToDate
+      - Range
+    contains_unique_names: false
+    dataset: date_dim
+    is_unique_key: false
+    key_columns:
+      - d_qoy
+      - d_year
+    name_column: d_qoy
+    sort_column: d_qoy
+    time_unit: quarter
+type: time

@@ -1,0 +1,10 @@
+unique_name: store net paid amount
+object_type: metric
+label: store net paid amount
+description: sum of ss_net_paid
+calculation_method: sum
+column: ss_net_paid
+dataset: store_sales
+format: $#,##0.00
+unrelated_dimensions_handling: empty
+folder: store sales metrics

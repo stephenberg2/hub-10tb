@@ -1,0 +1,10 @@
+unique_name: avg store sales price
+object_type: metric
+label: average store sales price
+description: avg of ss_sales_price
+calculation_method: average
+column: ss_sales_price
+dataset: store_sales
+format: $#,##0.00
+unrelated_dimensions_handling: empty
+folder: store sales metrics
