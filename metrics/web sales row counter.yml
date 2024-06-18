@@ -1,0 +1,9 @@
+unique_name: web sales row counter
+object_type: metric
+label: web sales row counter
+description: count of web sales fact rows
+calculation_method: sum
+column: ws_row_count
+dataset: web_sales
+format: general number
+unrelated_dimensions_handling: empty
