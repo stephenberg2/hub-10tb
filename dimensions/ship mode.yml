@@ -4,8 +4,8 @@ label: ship mode
 type: standard
 
 hierarchies:
-  - unique_name: ship mode
-    label: ship mode
+  - unique_name: ship mode hierarchy
+    label: ship mode hierarchy
     folder: fulfillment
     filter_empty: "yes"
 

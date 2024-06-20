@@ -1,6 +1,8 @@
 unique_name: product dimension
-object_type: dimension
 label: product dimension
+object_type: dimension
+type: standard
+
 hierarchies:
   - unique_name: product hierarchy
     label: product hierarchy
@@ -12,6 +14,7 @@ hierarchies:
       - unique_name: class
       - unique_name: brand
       - unique_name: name
+
 level_attributes:
   - unique_name: category
     label: category
@@ -21,15 +24,17 @@ level_attributes:
     key_columns:
       - i_category
     name_column: i_category
+
   - unique_name: class
     label: class
     contains_unique_names: false
     dataset: item
     is_unique_key: false
     key_columns:
-      - i_class
-      - i_category
+    - i_class
+    - i_category
     name_column: i_class
+
   - unique_name: brand
     label: brand
     contains_unique_names: false
@@ -40,6 +45,7 @@ level_attributes:
       - i_class
       - i_category
     name_column: i_brand
+
   - unique_name: name
     label: name
     contains_unique_names: false
@@ -49,4 +55,3 @@ level_attributes:
       - i_item_sk
     name_column: i_product_name
     sort_column: i_product_name
-type: standard

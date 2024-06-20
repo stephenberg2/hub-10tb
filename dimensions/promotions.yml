@@ -4,8 +4,8 @@ object_type: dimension
 type: standard
 
 hierarchies:
-  - unique_name: promotions
-    label: promotions
+  - unique_name: promotions hierarchy
+    label: promotions hierarchy
     filter_empty: 'yes'
     folder: promotion attributes
     levels:

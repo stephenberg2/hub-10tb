@@ -5,8 +5,8 @@ type: standard
 
 hierarchies:
 
-  - unique_name: customer dimension
-    label: customer dimension
+  - unique_name: customer hierarchy
+    label: customer hierarchy
     folder: customer information
     filter_empty: "yes"
 
