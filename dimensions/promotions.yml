@@ -1,0 +1,84 @@
+unique_name: promotions
+label: promotions
+object_type: dimension
+type: standard
+
+hierarchies:
+  - unique_name: promotions
+    label: promotions
+    filter_empty: 'yes'
+    folder: promotion attributes
+    levels:
+      - unique_name: promo active indicator
+      - unique_name: promotions
+        secondary_attributes:
+          - unique_name: channel catalog
+            label: channel catalog
+            dataset: promotion
+            folder: promotion attributes
+            key_columns:
+              - p_channel_catalog
+            name_column: p_channel_catalog
+            sort_column: p_channel_catalog
+
+          - unique_name: channel direct mail
+            label: channel direct mail
+            dataset: promotion
+            folder: promotion attributes
+            key_columns:
+              - p_channel_dmail
+            name_column: p_channel_dmail
+            sort_column: p_channel_dmail
+
+          - unique_name: channel email
+            label: channel email
+            dataset: promotion
+            folder: promotion attributes
+            key_columns:
+              - p_channel_email
+            name_column: p_channel_email
+            sort_column: p_channel_email
+
+          - unique_name: channel event
+            label: channel event
+            dataset: promotion
+            folder: promotion attributes
+            key_columns:
+              - p_channel_event
+            name_column: p_channel_event
+            sort_column: p_channel_event
+
+          - unique_name: channel tv
+            label: channel tv
+            dataset: promotion
+            folder: promotion attributes
+            key_columns:
+              - p_channel_tv
+            name_column: p_channel_tv
+            sort_column: p_channel_tv
+
+          - unique_name: promo name
+            label: promotion name
+            dataset: promotion
+            folder: promotion attributes
+            key_columns:
+              - p_promo_name
+            name_column: p_promo_name
+            sort_column: p_promo_name
+
+level_attributes:
+  - unique_name: promo active indicator
+    label: promo active indicator
+    dataset: promotion
+    key_columns:
+      - p_discount_active
+    name_column: p_discount_active
+    
+  - unique_name: promotions
+    label: promotion sk
+    dataset: promotion
+    is_hidden: true
+    key_columns:
+      - p_promo_sk
+    name_column: p_promo_sk
+
