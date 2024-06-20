@@ -1,0 +1,52 @@
+unique_name: product dimension
+object_type: dimension
+label: product dimension
+hierarchies:
+  - unique_name: product hierarchy
+    label: product hierarchy
+    description: category, class, brand, item drill path of the item table
+    filter_empty: 'yes'
+    folder: product attributes
+    levels:
+      - unique_name: category
+      - unique_name: class
+      - unique_name: brand
+      - unique_name: name
+level_attributes:
+  - unique_name: category
+    label: category
+    contains_unique_names: false
+    dataset: item
+    is_unique_key: false
+    key_columns:
+      - i_category
+    name_column: i_category
+  - unique_name: class
+    label: class
+    contains_unique_names: false
+    dataset: item
+    is_unique_key: false
+    key_columns:
+      - i_class
+      - i_category
+    name_column: i_class
+  - unique_name: brand
+    label: brand
+    contains_unique_names: false
+    dataset: item
+    is_unique_key: false
+    key_columns:
+      - i_brand
+      - i_class
+      - i_category
+    name_column: i_brand
+  - unique_name: name
+    label: name
+    contains_unique_names: false
+    dataset: item
+    is_unique_key: true
+    key_columns:
+      - i_item_sk
+    name_column: i_product_name
+    sort_column: i_product_name
+type: standard

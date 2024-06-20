@@ -1,0 +1,88 @@
+unique_name: store dimension
+label: store dimension
+object_type: dimension
+type: standard
+
+hierarchies:
+  - unique_name: store location hierarchy
+    label: store location hierarchy
+    filter_empty: 'yes'
+    folder: store attributes
+    levels:
+      - unique_name: store country
+      - unique_name: store state
+      - unique_name: store county
+      - unique_name: store city
+      - unique_name: store number
+
+        secondary_attributes:
+          - unique_name: store floor space
+            label: store floor space
+            dataset: store
+            folder: store attributes
+            key_columns:
+              - s_floor_space
+            name_column: s_floor_space
+            sort_column: s_floor_space
+
+          - unique_name: store number of employees
+            label: store number of employees
+            dataset: store
+            folder: store attributes
+            key_columns:
+              - s_number_employees
+            name_column: s_number_employees
+            sort_column: s_number_employees
+
+          - unique_name: store name
+            label: store name
+            dataset: store
+            folder: store attributes
+            key_columns:
+              - s_store_name
+            name_column: s_store_name
+            sort_column: s_store_name
+
+level_attributes:
+  - unique_name: store country
+    label: store country
+    dataset: store
+    key_columns:
+      - s_country
+    name_column: s_country
+
+  - unique_name: store state
+    label: store state
+    dataset: store
+    key_columns:
+      - s_country
+      - s_state
+    name_column: s_state
+
+  - unique_name: store county
+    label: store county
+    dataset: store
+    key_columns:
+      - s_country
+      - s_state
+      - s_county
+    name_column: s_county
+
+  - unique_name: store city
+    label: store city
+    dataset: store
+    key_columns:
+      - s_country
+      - s_state
+      - s_county
+      - s_city
+    name_column: s_city
+
+  - unique_name: store number
+    label: store number
+    dataset: store
+    is_hidden: true
+    is_unique_key: true
+    key_columns:
+      - s_store_sk
+    name_column: s_store_sk
