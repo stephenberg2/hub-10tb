@@ -74,7 +74,7 @@ columns:
 #calculated columns
   - name: ws_sales_net_paid
     data_type: decimal(38,2)
-    sql: ws_netpaid*ws_quantity
+    sql: ws_net_paid*ws_quantity
   - name: ws_web_sales
     data_type: decimal(38,2)
     sql: ws_ext_sales_price*ws_quantity
