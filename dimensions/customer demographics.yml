@@ -5,8 +5,8 @@ type: standard
 
 hierarchies:
 
-  - unique_name: customer demographics
-    label: customer demographics
+  - unique_name: customer demographics hierarchy
+    label: customer demographics hierarchy
     folder: customer information
     filter_empty: "yes"
 
@@ -14,19 +14,18 @@ hierarchies:
       - unique_name: customer number
 
         secondary_attributes:
-
-          - unique_name: d_cd_credit_rating
+          - unique_name: credit rating
             label: credit rating
-            folder: Customer Information
+            folder: customer information
             dataset: customer_demographics
             name_column: cd_credit_rating
             key_columns:
               - cd_credit_rating
             sort_column: cd_credit_rating
 
-          - unique_name: d_cd_gender
+          - unique_name: gender
             label: gender
-            folder: Customer Information
+            folder: customer information
             dataset: customer_demographics
             name_column: cd_gender
             key_columns:
