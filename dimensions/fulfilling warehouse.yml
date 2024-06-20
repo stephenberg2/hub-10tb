@@ -1,0 +1,74 @@
+unique_name: fulfilling warehouse
+object_type: dimension
+label: fulfilling warehouse
+hierarchies:
+  - unique_name: fulfilling warehouse
+    label: warehouse
+    filter_empty: 'yes'
+    folder: fulfillment
+    levels:
+      - unique_name: warehouse country
+      - unique_name: warehouse state
+      - unique_name: warehouse county
+      - unique_name: warehouse city
+      - unique_name: warehouse id
+      - unique_name: fulfilling warehouse
+        secondary_attributes:
+          - unique_name: d_warehouse_name
+            label: warehouse name
+            dataset: warehouse
+            folder: fulfillment
+            key_columns:
+              - w_warehouse_name
+            name_column: w_warehouse_name
+            sort_column: w_warehouse_name
+          - unique_name: d_warehouse_square_feet
+            label: warehouse square feet
+            dataset: warehouse
+            folder: fulfillment
+            key_columns:
+              - w_warehouse_sq_ft
+            name_column: w_warehouse_sq_ft
+            sort_column: w_warehouse_sq_ft
+level_attributes:
+  - unique_name: fulfilling warehouse
+    label: warehouse number
+    dataset: warehouse
+    is_hidden: true
+    is_unique_key: true
+    key_columns:
+      - w_warehouse_sk
+    name_column: w_warehouse_sk
+  - unique_name: warehouse id
+    label: warehouse id
+    dataset: warehouse
+    key_columns:
+      - w_warehouse_id
+    name_column: w_warehouse_id
+  - unique_name: warehouse city
+    label: warehouse city
+    dataset: warehouse
+    key_columns:
+      - w_country
+      - w_state
+      - w_city
+    name_column: w_city
+  - unique_name: warehouse country
+    label: warehouse country
+    dataset: warehouse
+    key_columns:
+      - w_country
+    name_column: w_country
+  - unique_name: warehouse county
+    label: warehouse county
+    dataset: warehouse
+    key_columns:
+      - w_county
+    name_column: w_county
+  - unique_name: warehouse state
+    label: warehouse state
+    dataset: warehouse
+    key_columns:
+      - w_state
+    name_column: w_state
+type: standard

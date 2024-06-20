@@ -1,0 +1,24 @@
+unique_name: customer_demographics
+object_type: dataset
+label: customer_demographics
+columns:
+  - name: cd_demo_sk
+    data_type: long
+  - name: cd_gender
+    data_type: string
+  - name: cd_marital_status
+    data_type: string
+  - name: cd_education_status
+    data_type: string
+  - name: cd_purchase_estimate
+    data_type: long
+  - name: cd_credit_rating
+    data_type: string
+  - name: cd_dep_count
+    data_type: long
+  - name: cd_dep_employed_count
+    data_type: long
+  - name: cd_dep_college_count
+    data_type: long
+connection_id: con_benchmark-251817_TPCDS_10TB
+table: customer_demographics

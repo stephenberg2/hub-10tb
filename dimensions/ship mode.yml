@@ -1,0 +1,50 @@
+unique_name: ship mode
+object_type: dimension
+label: ship mode
+type: standard
+
+hierarchies:
+  - unique_name: ship mode
+    label: ship mode
+    folder: fulfillment
+    filter_empty: "yes"
+
+    levels:
+      - unique_name: ship code
+      - unique_name: ship mode type
+      - unique_name: carrier
+      - unique_name: ship mode
+        is_hidden: true
+
+level_attributes:
+  - unique_name: ship code
+    label: ship code
+    dataset: ship_mode
+    name_column: sm_code
+    key_columns:
+      - sm_code
+
+  - unique_name: ship mode type
+    label: ship mode type
+    dataset: ship_mode
+    name_column: sm_type
+    key_columns:
+      - sm_type
+      - sm_code
+  
+  - unique_name: carrier
+    label: carrier
+    dataset: ship_mode
+    name_column: sm_carrier
+    key_columns:
+      - sm_carrier
+      - sm_code
+      - sm_type
+
+  - unique_name: ship mode
+    label: ship mode
+    is_hidden: true
+    dataset: ship_mode
+    name_column: sm_ship_mode_sk
+    key_columns:
+      - sm_ship_mode_sk
