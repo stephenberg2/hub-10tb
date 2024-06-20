@@ -40,5 +40,5 @@ columns:
     data_type: string
   - name: p_discount_active
     data_type: string
-connection_id: con_benchmark-251817_TPCDS_10TB
+connection_id: wh-connection
 table: promotion

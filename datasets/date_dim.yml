@@ -64,5 +64,5 @@ columns:
   - name: quarter_key
     data_type: string
     sql: d_qoy || d_year
-connection_id: con_benchmark-251817_TPCDS_10TB
+connection_id: wh-connection
 table: date_dim

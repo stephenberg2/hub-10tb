@@ -20,5 +20,5 @@ columns:
     data_type: long
   - name: cd_dep_college_count
     data_type: long
-connection_id: con_benchmark-251817_TPCDS_10TB
+connection_id: wh-connection
 table: customer_demographics

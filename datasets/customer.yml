@@ -38,5 +38,5 @@ columns:
     data_type: string
   - name: c_last_review_date
     data_type: string
-connection_id: con_benchmark-251817_TPCDS_10TB
+connection_id: wh-connection
 table: customer

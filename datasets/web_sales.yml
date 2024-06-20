@@ -81,5 +81,5 @@ columns:
   - name: ws_row_count
     data_type: int
     sql: '1'
-connection_id: con_benchmark-251817_TPCDS_10TB
+connection_id: wh-connection
 table: web_sales

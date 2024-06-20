@@ -28,5 +28,5 @@ columns:
     data_type: decimal(38,9)
   - name: ca_location_type
     data_type: string
-connection_id: con_benchmark-251817_TPCDS_10TB
+connection_id: wh-connection
 table: customer_address

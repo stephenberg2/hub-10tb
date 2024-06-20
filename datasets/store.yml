@@ -60,5 +60,5 @@ columns:
     data_type: decimal(38,9)
   - name: s_tax_precentage
     data_type: decimal(38,9)
-connection_id: con_benchmark-251817_TPCDS_10TB
+connection_id: wh-connection
 table: store

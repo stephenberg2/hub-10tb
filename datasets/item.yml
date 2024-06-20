@@ -46,5 +46,5 @@ columns:
     data_type: long
   - name: i_product_name
     data_type: string
-connection_id: con_benchmark-251817_TPCDS_10TB
+connection_id: wh-connection
 table: item
