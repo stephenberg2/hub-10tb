@@ -34,4 +34,5 @@ level_attributes:
     key_columns:
       - cd_demo_sk
     name_column: cd_demo_sk
+    sort_column: cd_demo_sk
 type: standard
