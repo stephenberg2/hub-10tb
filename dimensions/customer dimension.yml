@@ -39,6 +39,7 @@ level_attributes:
     dataset: customer_address
     key_columns:
       - ca_county
+      - ca_state
     name_column: ca_county
   - unique_name: customer number
     label: customer number
@@ -51,6 +52,7 @@ level_attributes:
     dataset: customer_address
     key_columns:
       - ca_state
+      - ca_country
     name_column: ca_state
 modeler_metadata:
   modified: 'false'
