@@ -1,15 +1,11 @@
 unique_name: customer dimension
-label: customer dimension
 object_type: dimension
-type: standard
-
+label: customer dimension
 hierarchies:
-
   - unique_name: customer hierarchy
     label: customer hierarchy
+    filter_empty: 'yes'
     folder: customer information
-    filter_empty: "yes"
-
     levels:
       - unique_name: customer country
       - unique_name: customer state
@@ -17,58 +13,49 @@ hierarchies:
       - unique_name: customer city
       - unique_name: customer number
         secondary_attributes:
-
           - unique_name: preferred customer ind
             label: preferred customer ind
-            folder: customer information
             dataset: customer
-            name_column: c_preferred_cust_flag
+            folder: customer information
             key_columns:
               - c_preferred_cust_flag
+            name_column: c_preferred_cust_flag
             sort_column: c_preferred_cust_flag
-
 level_attributes:
-
   - unique_name: customer city
     label: customer city
     dataset: customer_address
-    name_column: ca_city
     key_columns:
       - ca_address_id
-
+    name_column: ca_city
   - unique_name: customer country
     label: customer country
     dataset: customer_address
-    name_column: ca_country
     key_columns:
       - ca_country
-
+    name_column: ca_country
   - unique_name: customer county
     label: customer county
     dataset: customer_address
-    name_column: ca_county
     key_columns:
       - ca_county
-      - ca_country
-      - ca_state
-
+    name_column: ca_county
   - unique_name: customer number
     label: customer number
     dataset: customer
-    name_column: c_customer_sk
     key_columns:
       - c_customer_sk
-
+    name_column: c_customer_sk
   - unique_name: customer state
     label: customer state
     dataset: customer_address
-    name_column: ca_state
     key_columns:
       - ca_state
-      - ca_country
-
+    name_column: ca_state
+modeler_metadata:
+  modified: 'false'
+  version: 0
 relationships:
-
   - from:
       dataset: customer
       join_columns:
@@ -76,7 +63,4 @@ relationships:
     to:
       level: customer city
     type: snowflake
-
-modeler_metadata:
-  version: 0
-  modified: "false"
+type: standard
