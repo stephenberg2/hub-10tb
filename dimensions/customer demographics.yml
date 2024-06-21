@@ -1,43 +1,37 @@
 unique_name: customer demographics
 object_type: dimension
 label: customer demographics
-type: standard
-
 hierarchies:
-
   - unique_name: customer demographics hierarchy
     label: customer demographics hierarchy
+    filter_empty: 'yes'
     folder: customer information
-    filter_empty: "yes"
-
     levels:
       - unique_name: customer number
-
         secondary_attributes:
           - unique_name: credit rating
             label: credit rating
-            folder: customer information
             dataset: customer_demographics
-            name_column: cd_credit_rating
+            folder: customer information
             key_columns:
               - cd_credit_rating
+            name_column: cd_credit_rating
             sort_column: cd_credit_rating
-
           - unique_name: gender
             label: gender
-            folder: customer information
             dataset: customer_demographics
-            name_column: cd_gender
+            folder: customer information
             key_columns:
               - cd_gender
+            name_column: cd_gender
             sort_column: cd_gender
-
 level_attributes:
-
   - unique_name: customer number
     label: customer number
-    is_unique_key: true
     dataset: customer_demographics
-    name_column: cd_demo_sk
+    is_hidden: true
+    is_unique_key: true
     key_columns:
       - cd_demo_sk
+    name_column: cd_demo_sk
+type: standard
