@@ -96,7 +96,8 @@ level_attributes:
     dataset: date_dim
     is_unique_key: false
     key_columns:
-      - quarter_key
+      - d_qoy
+      - d_year
     name_column: d_qoy
     sort_column: d_qoy
     time_unit: quarter
