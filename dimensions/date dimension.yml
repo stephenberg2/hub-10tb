@@ -1,8 +1,7 @@
 unique_name: date dimension
-label: date dimension
 object_type: dimension
+label: date dimension
 description: time dimension
-
 hierarchies:
   - unique_name: date month hierarchy
     label: date month hierarchy
@@ -13,7 +12,6 @@ hierarchies:
       - unique_name: year
       - unique_name: month
       - unique_name: day
-
   - unique_name: date hierarchy
     label: date hierarchy
     description: year, quarter, month, day drill path
@@ -23,7 +21,6 @@ hierarchies:
       - unique_name: quarter
       - unique_name: month
       - unique_name: day
-      
 level_attributes:
   - unique_name: year
     label: year
@@ -44,7 +41,6 @@ level_attributes:
     name_column: d_year
     sort_column: d_year
     time_unit: year
-    
   - unique_name: month
     label: month
     allowed_calcs_for_dma:
@@ -60,11 +56,12 @@ level_attributes:
     dataset: date_dim
     is_unique_key: false
     key_columns:
-      - month_key
+      - d_moy
+      - d_qoy
+      - d_year
     name_column: d_moy
     sort_column: d_date
     time_unit: month
-
   - unique_name: day
     label: day
     allowed_calcs_for_dma:
@@ -84,7 +81,6 @@ level_attributes:
     name_column: d_date
     sort_column: d_date
     time_unit: day
-
   - unique_name: quarter
     label: quarter
     allowed_calcs_for_dma:
