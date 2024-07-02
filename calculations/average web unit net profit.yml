@@ -1,0 +1,7 @@
+unique_name: average web unit net profit
+object_type: metric_calc
+label: average web unit net profit
+description: net profit divided by quantity sold
+expression: '[Measures].[web net profit] / [Measures].[web quantity sold]'
+format: $#,##0.00
+is_hidden: false
