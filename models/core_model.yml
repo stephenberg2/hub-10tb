@@ -1,6 +1,6 @@
-unique_name: TPCDS-10TB
+unique_name: core_model
 object_type: model
-label: TPCDS-10TB
+label: core_model
 metrics:
   - unique_name: avg store list price
     folder: store sales metrics
