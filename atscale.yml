@@ -1,6 +1,0 @@
-unique_name: hub-10tb
-object_type: catalog
-label: hub-10tb
-aggressive_agg_promotion: false
-as_version: 1
-build_speculative_aggs: false
