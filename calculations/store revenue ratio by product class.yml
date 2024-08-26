@@ -1,0 +1,11 @@
+unique_name: store revenue ratio by product class
+object_type: metric_calc
+label: store revenue ratio by product class
+expression: >-
+  divide(
+  [Measures].[store sales price] 
+  , 
+  ([product dimension].[product hierarchy].[All], [Measures].[store sales price])
+  )
+format: percent
+is_hidden: false

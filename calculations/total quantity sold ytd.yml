@@ -1,0 +1,9 @@
+unique_name: total quantity sold ytd
+object_type: metric_calc
+label: total quantity sold ytd
+expression: >-
+  SUM(
+  PeriodsToDate([sold date dimension].[sold date hierarchy].[sold year]
+  ,[sold date dimension].[sold date hierarchy].CurrentMember)
+  ,[Measures].[total quantity sold])
+is_hidden: false

@@ -1,0 +1,5 @@
+unique_name: average store unit net profit
+object_type: metric_calc
+label: average store unit net profit
+expression: '[Measures].[store net profit] / [Measures].[store quantity sold]'
+is_hidden: false

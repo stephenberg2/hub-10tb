@@ -1,0 +1,14 @@
+unique_name: quantity sold ly
+object_type: metric_calc
+label: quantity sold ly
+description: Quantity Sold Amount Prev Year (Sold Date Dim)
+expression: >-
+  CASE WHEN ISEMPTY([Measures].[store quantity sold]) 
+  THEN NULL
+  ELSE(ParallelPeriod([sold date dimension].[sold date hierarchy].[sold year]
+  , 1
+  , [sold date dimension].[sold date hierarchy].CurrentMember)
+  , [Measures].[store quantity sold]) 
+  END
+format: general number
+is_hidden: false
