@@ -5,6 +5,6 @@ expression: >
   divide(
   ([sold date dimension].[sold date hierarchy].CurrentMember, [Measures].[store sales price]) 
   ,
-  ([sold date Dimension].[sold date hierarchy].CurrentMember.PrevMember, [Measures].[store sales price])
+  ([sold date dimension].[sold date hierarchy].CurrentMember.PrevMember, [Measures].[store sales price])
   )
 is_hidden: false
