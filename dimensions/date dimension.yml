@@ -57,8 +57,9 @@ level_attributes:
     is_unique_key: false
     key_columns:
       - d_moy
+      - d_year
     name_column: d_moy
-    sort_column: d_date
+    sort_column: d_moy
     time_unit: month
   - unique_name: day
     label: day
@@ -95,6 +96,7 @@ level_attributes:
     is_unique_key: false
     key_columns:
       - d_qoy
+      - d_year
     name_column: d_qoy
     sort_column: d_qoy
     time_unit: quarter
