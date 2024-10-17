@@ -1,0 +1,6 @@
+unique_name: wh-connection
+object_type: connection
+label: wh-connection
+as_connection: {{CONNECTION}}
+database: {{DATABASE}}
+schema: {{SCHEMA}}
