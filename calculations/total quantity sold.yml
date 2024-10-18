@@ -1,5 +1,0 @@
-unique_name: total quantity sold
-object_type: metric_calc
-label: total quantity sold
-expression: '[Measures].[store quantity sold] + [Measures].[web quantity sold]'
-is_hidden: false
