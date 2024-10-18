@@ -28,6 +28,8 @@ metrics:
     folder: web sales metrics
   - unique_name: average web unit net profit
     folder: web sales metrics
+  - unique_name: web sales net paid
+    folder: web sales metrics
 relationships:
   - unique_name: web_sales_ws_bill_cdemo_sk_to_customer demographics_customer number
     from:
