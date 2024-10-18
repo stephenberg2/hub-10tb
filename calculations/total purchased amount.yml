@@ -1,5 +1,5 @@
-unique_name: store and web purchased amount
+unique_name: total purchased amount
 object_type: metric_calc
-label: store and web purchased amount
+label: total purchased amount
 expression: '[Measures].[purchased amount in store]'
 is_hidden: false

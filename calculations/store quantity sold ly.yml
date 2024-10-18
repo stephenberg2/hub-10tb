@@ -1,6 +1,6 @@
-unique_name: quantity sold ly
+unique_name: store quantity sold ly
 object_type: metric_calc
-label: quantity sold ly
+label: store quantity sold ly
 description: Quantity Sold Amount Prev Year (Sold Date Dim)
 expression: >-
   CASE WHEN ISEMPTY([Measures].[store quantity sold]) 

@@ -1,0 +1,97 @@
+unique_name: web sales model
+object_type: model
+label: web sales model
+metrics:
+  - unique_name: web customer count
+    folder: web sales metrics
+  - unique_name: web ext discount amount
+    folder: web sales metrics
+  - unique_name: web ext ship cost
+    folder: web sales metrics
+  - unique_name: web ext wholesale cost
+    folder: web sales metrics
+  - unique_name: web net paid amount
+    folder: web sales metrics
+  - unique_name: web net paid incl ship
+    folder: web sales metrics
+  - unique_name: web net paid incl tax and ship
+    folder: web sales metrics
+  - unique_name: web net paid incl tax
+    folder: web sales metrics
+  - unique_name: web net profit
+    folder: web sales metrics
+  - unique_name: web quantity sold
+    folder: web sales metrics
+  - unique_name: web sales row counter
+    folder: web sales metrics
+  - unique_name: web sales
+    folder: web sales metrics
+  - unique_name: average web unit net profit
+    folder: web sales metrics
+relationships:
+  - unique_name: web_sales_ws_bill_cdemo_sk_to_customer demographics_customer number
+    from:
+      dataset: web_sales
+      join_columns:
+        - ws_bill_cdemo_sk
+    to:
+      dimension: customer demographics
+      level: customer number
+  - unique_name: web_sales_ws_bill_customer_sk_to_customer dimension_customer number
+    from:
+      dataset: web_sales
+      join_columns:
+        - ws_bill_customer_sk
+    to:
+      dimension: customer dimension
+      level: customer number
+  - unique_name: web_sales_ws_sold_date_sk_to_date dimension_day
+    from:
+      dataset: web_sales
+      join_columns:
+        - ws_sold_date_sk
+    role_play: sold {0}
+    to:
+      dimension: date dimension
+      level: day
+  - unique_name: web_sales_ws_ship_date_sk_to_date dimension_day
+    from:
+      dataset: web_sales
+      join_columns:
+        - ws_ship_date_sk
+    role_play: ship {0}
+    to:
+      dimension: date dimension
+      level: day
+  - unique_name: web_sales_ws_warehouse_sk_to_fulfilling warehouse_warehouse number
+    from:
+      dataset: web_sales
+      join_columns:
+        - ws_warehouse_sk
+    to:
+      dimension: fulfilling warehouse
+      level: warehouse number
+  - unique_name: web_sales_ws_item_sk_to_product dimension_name
+    from:
+      dataset: web_sales
+      join_columns:
+        - ws_item_sk
+    to:
+      dimension: product dimension
+      level: name
+  - unique_name: web_sales_ws_promo_sk_to_promotions_promotions
+    from:
+      dataset: web_sales
+      join_columns:
+        - ws_promo_sk
+    to:
+      dimension: promotions
+      level: promotions
+  - unique_name: web_sales_ws_ship_mode_sk_to_ship mode_ship mode
+    from:
+      dataset: web_sales
+      join_columns:
+        - ws_ship_mode_sk
+    to:
+      dimension: ship mode
+      level: ship mode

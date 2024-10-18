@@ -1,0 +1,84 @@
+unique_name: store sales model
+object_type: model
+label: store sales model
+metrics:
+  - unique_name: avg store list price
+    folder: store sales metrics
+  - unique_name: avg store sales price
+    folder: store sales metrics
+  - unique_name: purchased amount in store
+    folder: store sales metrics
+  - unique_name: store coupon amount
+    folder: store sales metrics
+  - unique_name: store customer count
+    folder: store sales metrics
+  - unique_name: store net paid amount
+    folder: store sales metrics
+  - unique_name: store net paid incl tax
+    folder: store sales metrics
+  - unique_name: store net profit
+    folder: store sales metrics
+  - unique_name: store quantity sold
+    folder: store sales metrics
+  - unique_name: store sales price
+    folder: store sales metrics
+  - unique_name: store sales row counter
+    folder: store sales metrics
+  - unique_name: average store unit net profit
+    folder: store sales metrics
+  - unique_name: store quantity sold ly
+    folder: store sales metrics
+  - unique_name: store revenue ratio by product class
+    folder: store sales metrics
+  - unique_name: store sales increase
+    folder: store sales metrics
+relationships:
+  - unique_name: store_sales_ss_sold_date_sk_to_date dimension_day
+    from:
+      dataset: store_sales
+      join_columns:
+        - ss_sold_date_sk
+    role_play: sold {0}
+    to:
+      dimension: date dimension
+      level: day
+  - unique_name: store_sales_ss_cdemo_sk_to_customer demographics_customer number
+    from:
+      dataset: store_sales
+      join_columns:
+        - ss_cdemo_sk
+    to:
+      dimension: customer demographics
+      level: customer number
+  - unique_name: store_sales_ss_customer_sk_to_customer dimension_customer number
+    from:
+      dataset: store_sales
+      join_columns:
+        - ss_customer_sk
+    to:
+      dimension: customer dimension
+      level: customer number
+  - unique_name: store_sales_ss_item_sk_to_product dimension_name
+    from:
+      dataset: store_sales
+      join_columns:
+        - ss_item_sk
+    to:
+      dimension: product dimension
+      level: name
+  - unique_name: store_sales_ss_promo_sk_to_promotions_promotions
+    from:
+      dataset: store_sales
+      join_columns:
+        - ss_promo_sk
+    to:
+      dimension: promotions
+      level: promotions
+  - unique_name: store_sales_ss_store_sk_to_store dimension_store number
+    from:
+      dataset: store_sales
+      join_columns:
+        - ss_store_sk
+    to:
+      dimension: store dimension
+      level: store number
