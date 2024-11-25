@@ -100,4 +100,32 @@ level_attributes:
     name_column: d_qoy
     sort_column: d_qoy
     time_unit: quarter
+
+calculation_groups:
+  - unique_name: timeframe
+    label: timeframe
+    folder: timeframe
+    name: timeframe
+    description: timeframe
+
+    calculated_members:
+      - unique_name: MTD
+        expression: aggregate(datesMTD([date dimension].[date hierarchy].CurrentMember),[Measures].CurrentMember)
+        format: Standard
+        hierarchy: date month hierarchy
+        name: MTD
+        description: mtd
+      - unique_name: QTD
+        expression: aggregate(datesQTD([date dimension].[date hierarchy].CurrentMember),[Measures].CurrentMember)
+        format: Standard
+        hierarchy: date hierarchy
+        name: QTD
+        description: qtd
+      - unique_name: YTD
+        expression: aggregate(datesYTD([date dimension].[date hierarchy].CurrentMember),[Measures].CurrentMember)
+        format: Standard
+        hierarchy: date hierarchy
+        name: YTD
+        description: ytd
+
 type: time
