@@ -1,10 +1,9 @@
 unique_name: store sales increase
 object_type: metric_calc
 label: store sales increase
-expression: >
-  divide(
-  ([sold date dimension].[sold date hierarchy].CurrentMember, [Measures].[store sales price]) 
-  ,
-  ([sold date dimension].[sold date hierarchy].CurrentMember.PrevMember, [Measures].[store sales price])
-  )
+expression: >-
+  divide( ([sold date dimension].[sold date hierarchy].CurrentMember,
+  [Measures].[store sales price])  , ([sold date dimension].[sold date
+  hierarchy].CurrentMember.PrevMember, [Measures].[store sales price]) )
 is_hidden: false
+mdx_aggregate_function: SUM

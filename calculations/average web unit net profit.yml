@@ -5,3 +5,4 @@ description: net profit divided by quantity sold
 expression: '[Measures].[web net profit] / [Measures].[web quantity sold]'
 format: $#,##0.00
 is_hidden: false
+mdx_aggregate_function: AVG

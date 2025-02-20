@@ -1,0 +1,9 @@
+unique_name: store quantity sold mtd
+object_type: metric_calc
+label: store quantity sold mtd
+expression: >-
+  Aggregate(DatesMTD([sold date dimension].[sold date hierarchy].CurrentMember),
+  [Measures].[store quantity sold])
+format: general number
+is_hidden: false
+mdx_aggregate_function: SUM
