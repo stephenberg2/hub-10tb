@@ -32,6 +32,7 @@ metrics:
     folder: store sales metrics
   - unique_name: store sales increase
     folder: store sales metrics
+  - unique_name: store quantity sold mtd
 relationships:
   - unique_name: store_sales_ss_sold_date_sk_to_date dimension_day
     from:
